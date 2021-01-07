@@ -1,0 +1,73 @@
+@media (max-width: 1280px)
+  .header
+    &__container
+      max-width: 1000px
+      margin: 0 auto
+      margin-top: 35px
+@media (max-width: 1000px)
+  .header
+    &__container
+      max-width: 768px
+      margin: 0 auto
+      margin-top: 35px
+@media (max-width: 768px)
+  .header
+    &__navbar
+      margin: 0
+      &-item
+        margin-bottom: 20px
+      &-list
+        flex-direction: column
+        width: 50%
+    &__menu
+      display: none
+      position: fixed
+      top: 77px
+      right: 0
+      bottom: 0
+      left: 0
+      flex-direction: column
+      padding: 22px 14px
+      &-visible
+        display: flex
+        align-items: center
+        overflow: scroll
+        width: 100%
+    &__mobile
+      &-fixed
+        position: fixed
+        top: 0
+        right: 0
+        left: 0
+    &__container
+      max-width: 480px
+      width: 92%
+      margin: 0 auto
+      margin-top: 25px
+    &__burger
+      display: flex
+      width: 40px
+      height: 20px
+      padding: 0
+      align-items: center
+      justify-content: space-between
+      flex-direction: column
+      border: none
+      background-color: #fff
+      margin-top: 10px
+      outline: none
+  .login
+    flex-direction: column
+    &__login
+      margin-right: 0
+      margin-top: 10px
+  .button
+    display: block
+    margin-bottom: 10px
+
+@media (max-width: 480px)
+  .header
+    &__container
+      max-width: 320px
+      margin: 0 auto
+      margin-top: 25px

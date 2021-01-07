@@ -15,9 +15,12 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="header header__mobile-fixed">
       <div class="header__container">
-        <a href="#"><img class="header__img" src="img/header/logo.svg" alt="Icon: Logo" /></a>
+        <a href="#"
+          ><img class="header__img" src="img/header/logo.svg" alt="Icon: Logo"
+        /></a>
+        <div class="header__menu">
           <div class="header__navbar">
             <ul class="header__navbar-list">
               <li class="header__navbar-item">
@@ -36,13 +39,20 @@
           </div>
           <!-- /.header__navbar -->
           <div class="login">
-            <button href="#" class="login__login button">Login</button>
-            <button href="#" class="login__register button">Register</button>
+            <button class="login__login button">Login</button>
+            <button class="login__register button">Register</button>
           </div>
           <!-- /.login -->
+        </div>
+        <!-- /.header__menu -->
+        <button class="header__burger">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
       </div>
       <!-- /.header__container -->
     </header>
+    <script src="js/main.js"></script>
   </body>
 </html>
-</div>
