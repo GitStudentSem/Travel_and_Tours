@@ -4,12 +4,14 @@
       max-width: 1000px
       margin: 0 auto
       margin-top: 35px
+
 @media (max-width: 1000px)
   .header
     &__container
       max-width: 768px
       margin: 0 auto
       margin-top: 35px
+
 @media (max-width: 768px)
   .header
     &__navbar
@@ -19,6 +21,9 @@
       &-list
         flex-direction: column
         width: 50%
+        height: 150px
+      &-link
+        font-size: 20px
     &__menu
       display: none
       position: fixed
@@ -56,11 +61,14 @@
       background-color: #fff
       margin-top: 10px
       outline: none
+
   .login
+    font-size: 20px
     flex-direction: column
     &__login
       margin-right: 0
-      margin-top: 10px
+      margin-top: 20px
+
   .button
     display: block
     margin-bottom: 10px
