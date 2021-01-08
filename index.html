@@ -15,32 +15,34 @@
   </head>
 
   <body>
-    <header class="header header__mobile-fixed">
+    <header id="header" class="header header__mobile-fixed">
       <div class="header__container">
-        <a href="#"
+        <a href="#popup"
           ><img class="header__img" src="img/header/logo.svg" alt="Icon: Logo"
         /></a>
         <div class="header__menu">
           <div class="header__navbar">
             <ul class="header__navbar-list">
               <li class="header__navbar-item">
-                <a href="#" class="header__navbar-link">Home</a>
+                <a href="#popup" class="header__navbar-link">Home</a>
               </li>
               <li class="header__navbar-item">
-                <a href="#" class="header__navbar-link">Destinations</a>
+                <a href="#popup" class="header__navbar-link">Destinations</a>
               </li>
               <li class="header__navbar-item">
-                <a href="#" class="header__navbar-link">About</a>
+                <a href="#popup" class="header__navbar-link">About</a>
               </li>
               <li class="header__navbar-item">
-                <a href="#" class="header__navbar-link">Partner</a>
+                <a href="#popup" class="header__navbar-link">Partner</a>
               </li>
             </ul>
           </div>
           <!-- /.header__navbar -->
           <div class="login">
-            <button class="login__login button">Login</button>
-            <button class="login__register button">Register</button>
+            <button type="submit" class="login__login button">Login</button>
+            <button type="submit" class="login__register button">
+              Register
+            </button>
           </div>
           <!-- /.login -->
         </div>
@@ -53,6 +55,67 @@
       </div>
       <!-- /.header__container -->
     </header>
+    <section class="main">
+      <div class="finder">
+        <h1 class="finder__title">Explore and Travel</h1>
+        <p class="finder__subtitle">Holiday finder</p>
+        <p class="finder__line"></p>
+        <form action="" method="POST" class="finder__form">
+          <select class="finder__location finder__menu">
+            <option>Location</option>
+            <option>Spain</option>
+            <option>France</option>
+            <option>Russia</option>
+          </select>
+          <select class="finder__activity finder__menu">
+            <option>Activity</option>
+            <option>Yachting</option>
+            <option>Parachuting</option>
+            <option>Alpinism</option>
+          </select>
+          <select class="finder__grade finder__menu">
+            <option>Grade</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+          <select class="finder__date finder__menu">
+            <option>Date</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select>
+          <button type="submit" class="finder__button button">Explore</button>
+        </form>
+      </div>
+      <!-- /.finder -->
+      <img class="finder__image" src="img/main/main-image.png" alt="" />
+    </section>
+    <div id="popup" class="popup">
+      <a href="#header" class="popup__area"></a>
+      <div class="popup__body">
+        <div class="popup__content">
+          <a href="#header" class="popup__close">X</a>
+          <h1 class="popup__title">Ссылка не работает :(</h1>
+          <p class="popup__text">
+            Это учебная модель и тут ничего нет, но в вашем проекте она будет
+            работать.
+          </p>
+        </div>
+        <!-- popup__content -->
+      </div>
+      <!-- popup__body -->
+    </div>
+    <!-- popup -->
     <script src="js/main.js"></script>
   </body>
 </html>

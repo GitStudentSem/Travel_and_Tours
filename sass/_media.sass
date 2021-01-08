@@ -3,14 +3,43 @@
     &__container
       max-width: 1000px
       margin: 0 auto
-      margin-top: 35px
+      margin-top: 20px
+      margin-bottom: 20px
+
+  .finder
+    &__image
+      width: 500px
+      height: 500px
+    &__menu
+      max-width: 160px
+
+  .main
+    max-width: 1000px
 
 @media (max-width: 1000px)
   .header
     &__container
       max-width: 768px
       margin: 0 auto
-      margin-top: 35px
+      margin-top: 25px
+
+  .main
+    max-width: 768px
+
+  .finder
+    max-width: 100%
+    &__title
+      font-size: 50px
+      margin: 0 0 20px 0
+    &__menu
+      max-width: 120px
+      margin-right: 40px
+      padding-left: 10px
+    &__button
+      max-width: 120px
+      padding: 0px 30px
+    &__image
+      display: none
 
 @media (max-width: 768px)
   .header
@@ -33,6 +62,7 @@
       left: 0
       flex-direction: column
       padding: 22px 14px
+      background-color: #fff
       &-visible
         display: flex
         align-items: center
@@ -73,9 +103,34 @@
     display: block
     margin-bottom: 10px
 
+  .main
+    max-width: 480px
+    padding-top: 77px
+
+  .finder
+    &__title
+      margin: 0
+    &__line
+      margin-bottom: 20px
+    &__menu
+      margin: 0
+      max-width: 100%
+      margin: 0 0 20px 0
+    &__button
+      margin: 0
 @media (max-width: 480px)
   .header
     &__container
       max-width: 320px
       margin: 0 auto
       margin-top: 25px
+
+  .main
+    max-width: 320px
+    padding-top: 77px
+
+  .finder
+    &__title
+      font-size: 33px
+    &__menu
+      max-width: 49%
