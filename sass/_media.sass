@@ -81,6 +81,15 @@
       height: 337px
       margin-bottom: 30px
 
+.footer
+  max-width: 950px
+  &__text
+    max-width: 300px
+    &-description
+      margin-bottom: 20px
+  &__menu
+    margin-bottom: 60px
+
 @media (max-width: 1000px)
   .header
     &__container
@@ -185,6 +194,18 @@
       line-height: 20px
     &__text
       margin-bottom: 15px
+
+  .footer
+    max-width: 740px
+    &__text
+      max-width: 200px
+      font-size: 16px
+      &-img
+        margin-bottom: 0
+      &-reserved
+        font-size: 15px
+    &__title
+      margin-bottom: 40px
 
 @media (max-width: 768px)
   .header
@@ -335,6 +356,30 @@
     &__country
       display: none
 
+  .footer
+    max-width: 450px
+    &__text
+      max-width: 25%
+      margin-right: 20px
+      &-description
+        font-size: 15px
+        line-height: 18px
+      &-reserved
+        font-size: 14px
+        line-height: 0
+    &__title
+      font-size: 15px
+    &__item
+      margin: 0 0 7px 0
+    &__link
+      font-size: 13px
+    &__destinations
+      margin: 0 20px 0 0
+    &__shop
+      margin: 0 20px 0 0
+    &__menu
+      margin-bottom: 30px
+
 @media (max-width: 480px)
   .header
     &__container
@@ -447,3 +492,16 @@
       margin-bottom: 20px
       &-text
         height: 15%
+  .footer
+    max-width: 300px
+    &__text
+      order: 1
+      max-width: 45%
+      margin: 0
+    &__menu
+      flex-wrap: wrap
+    &__title
+      margin-bottom: 20px
+    &__destinations
+      margin: 0px 0px 20px 0
+      max-width: 45%
