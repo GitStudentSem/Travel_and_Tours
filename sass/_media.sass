@@ -16,12 +16,21 @@
   .main
     max-width: 950px
     margin-bottom: 150px
+
   .popup
     &__title
       font-size: 60px
       margin: 0 0 0 0
     &__content
       font-size: 20px
+
+  .modal
+    &__title
+      font-size: 60px
+      margin: 0 0 0 0
+    &__text
+      font-size: 20px
+      margin-bottom: 0
 
   .history
     max-width: 950px
@@ -36,12 +45,24 @@
 
   .course
     max-width: 950px
+    margin-bottom: 150px
     &__wrapper
       flex-wrap: wrap
     &__card
       width: 49%
       height: 337px
       margin-bottom: 30px
+
+  .guide
+    max-width: 950px
+    margin-bottom: 150px
+    &__description
+      max-width: 400px
+    &__image
+      width: 549px
+      height: 445px
+    &__title
+      font-size: 30px
 
 @media (max-width: 1000px)
   .header
@@ -76,6 +97,14 @@
     &__content
       font-size: 20px
 
+  .modal
+    &__title
+      font-size: 50px
+      margin: 0 0 0 0
+      line-height: 60px
+    &__content
+      font-size: 20px
+
   .history
     max-width: 740px
     margin-bottom: 100px
@@ -89,6 +118,7 @@
 
   .course
     max-width: 740px
+    margin-bottom: 100px
     &__card
       position: relative
       width: 24%
@@ -101,6 +131,17 @@
       line-height: 20px
     &__text
       margin-bottom: 15px
+
+  .guide
+    max-width: 740px
+    margin-bottom: 100px
+    &__description
+      max-width: 300px
+    &__image
+      width: 455px
+      height: 368px
+    &__text
+      margin-bottom: 20px
 
 @media (max-width: 768px)
   .header
@@ -198,9 +239,12 @@
   .modal
     &__dialog
       padding-top: 50px
+    &__title
+      line-height: 60px
 
   .course
     max-width: 450px
+    margin-bottom: 75px
     &__wrapper
       flex-wrap: wrap
     &__card
@@ -211,6 +255,16 @@
       font-size: 30px
     &__country
       font-size: 14px
+
+  .guide
+    max-width: 450px
+    margin-bottom: 75px
+    &__description
+      max-width: 100%
+    &__image
+      display: none
+    &__text
+      margin-bottom: 20px
 
 @media (max-width: 480px)
   .header
@@ -223,6 +277,7 @@
     max-width: 300px
     padding-top: 77px
     margin-bottom: 50px
+
   .finder
     &__title
       font-size: 33px
@@ -243,6 +298,21 @@
         height: 30px
         width: 30px
 
+  .modal
+    &__title
+      line-height: 30px
+      font-size: 22px
+    &__content
+      padding: 20px
+      padding-top: 40px
+      font-size: 18px
+    &__text
+      margin-bottom: 0
+      font-size: 18px
+    &__close
+      height: 30px
+      width: 30px
+
   .history
     max-width: 300px
     margin-bottom: 50px
@@ -258,6 +328,7 @@
 
   .course
     max-width: 300px
+    margin-bottom: 50px
     &__title
       font-size: 20px
     &__country
@@ -268,3 +339,16 @@
       margin-bottom: 20px
       &-text
         width: 100px
+
+  .guide
+    max-width: 300px
+    margin-bottom: 50px
+    &__description
+      max-width: 100%
+    &__image
+      display: none
+    &__text
+      margin-bottom: 20px
+    &__title
+      font-size: 21px
+      line-height: 21px
