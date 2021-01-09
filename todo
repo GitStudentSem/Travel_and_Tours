@@ -2,10 +2,9 @@
     - 999
     - 767
     - 479
+
+- Слайдер не смахивается жестом, не знаю почему, проверить и решить проблему
 Настройки шрифтов
 font-family: 'Inter', sans-serif;
 font-family: 'Mulish', sans-serif;
 font-family: 'Playfair Display', serif;
-
-.prev
-  transform: rotate(180deg)
