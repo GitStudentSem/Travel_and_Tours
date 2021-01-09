@@ -6,3 +6,6 @@
 font-family: 'Inter', sans-serif;
 font-family: 'Mulish', sans-serif;
 font-family: 'Playfair Display', serif;
+
+.prev
+  transform: rotate(180deg)
