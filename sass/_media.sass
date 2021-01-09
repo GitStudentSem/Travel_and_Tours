@@ -25,6 +25,7 @@
 
   .history
     max-width: 950px
+    margin-bottom: 150px
     &__description
       max-width: 400px
     &__image
@@ -32,6 +33,16 @@
       height: 445px
     &__title
       font-size: 30px
+
+  .course
+    max-width: 950px
+    &__wrapper
+      flex-wrap: wrap
+    &__card
+      width: 49%
+      height: 337px
+      margin-bottom: 30px
+
 @media (max-width: 1000px)
   .header
     &__container
@@ -41,6 +52,7 @@
 
   .main
     max-width: 740px
+    margin-bottom: 100px
 
   .finder
     max-width: 100%
@@ -66,6 +78,7 @@
 
   .history
     max-width: 740px
+    margin-bottom: 100px
     &__description
       max-width: 300px
     &__image
@@ -73,6 +86,22 @@
       height: 368px
     &__text
       margin-bottom: 20px
+
+  .course
+    max-width: 740px
+    &__card
+      position: relative
+      width: 24%
+      height: 200px
+      margin-bottom: 30px
+    &__place
+      font-size: 15px
+      line-height: 17px
+    &__country
+      line-height: 20px
+    &__text
+      margin-bottom: 15px
+
 @media (max-width: 768px)
   .header
     &__navbar
@@ -138,7 +167,7 @@
   .main
     max-width: 450px
     padding-top: 77px
-    margin-bottom: 100px
+    margin-bottom: 75px
 
   .finder
     &__title
@@ -158,6 +187,7 @@
 
   .history
     max-width: 450px
+    margin-bottom: 75px
     &__description
       max-width: 100%
     &__image
@@ -168,6 +198,19 @@
   .modal
     &__dialog
       padding-top: 50px
+
+  .course
+    max-width: 450px
+    &__wrapper
+      flex-wrap: wrap
+    &__card
+      width: 49%
+      height: 200px
+      margin-bottom: 20px
+    &__title
+      font-size: 30px
+    &__country
+      font-size: 14px
 
 @media (max-width: 480px)
   .header
@@ -202,10 +245,26 @@
 
   .history
     max-width: 300px
+    margin-bottom: 50px
     &__description
       max-width: 100%
     &__image
       display: none
-
     &__text
       margin-bottom: 20px
+    &__title
+      font-size: 21px
+      line-height: 21px
+
+  .course
+    max-width: 300px
+    &__title
+      font-size: 20px
+    &__country
+      font-size: 13px
+    &__card
+      width: 100%
+      height: 200px
+      margin-bottom: 20px
+      &-text
+        width: 100px

@@ -1,7 +1,13 @@
+- для блока курс
     - 1279 @done
     - 999 @done
-    - 767 @done
-    - 479 @done
+    - 767
+    - 479
+- для модального окна кнопки
+    - 1279
+    - 999
+    - 767
+    - 479
 Настройки шрифтов
 font-family: 'Inter', sans-serif;
 font-family: 'Mulish', sans-serif;
