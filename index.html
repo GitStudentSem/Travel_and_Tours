@@ -39,8 +39,18 @@
           </div>
           <!-- /.header__navbar -->
           <div class="login">
-            <button type="submit" class="login__login button">Login</button>
-            <button type="submit" class="login__register button">
+            <button
+              data-toggle="modal"
+              type="submit"
+              class="login__login button"
+            >
+              Login
+            </button>
+            <button
+              data-toggle="modal"
+              type="submit"
+              class="login__register button"
+            >
               Register
             </button>
           </div>
@@ -94,7 +104,13 @@
             <option>November</option>
             <option>December</option>
           </select>
-          <button type="submit" class="finder__button button">Explore</button>
+          <button
+            data-toggle="modal"
+            type="button"
+            class="finder__button button"
+          >
+            Explore
+          </button>
         </form>
       </div>
       <!-- /.finder -->
@@ -104,8 +120,10 @@
       <a href="#header" class="popup__area"></a>
       <div class="popup__body">
         <div class="popup__content">
-          <a href="#header" class="popup__close">X</a>
-          <h1 class="popup__title">Ссылка не работает :(</h1>
+          <a href="#header" class="popup__close"
+            ><img class="popup__close-img" src="img/closed.svg" alt=""
+          /></a>
+          <h1 class="popup__title">Ссылка не работает&nbsp;:&nbsp;(</h1>
           <p class="popup__text">
             Это учебная модель и тут ничего нет, но в вашем проекте она будет
             работать.
@@ -116,6 +134,30 @@
       <!-- popup__body -->
     </div>
     <!-- popup -->
+
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <a class="popup__close" href="#">
+          <img
+            class="modal__close popup__close-img"
+            src="img/closed.svg"
+            alt=""
+          />
+        </a>
+        <h1 class="modal__title popup__title">
+          Ссылка не работает&nbsp;:&nbsp;(
+        </h1>
+        <p class="modal__text popup__text">
+          Это учебная модель и тут ничего нет, но в вашем проекте она будет
+          работать.
+        </p>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
