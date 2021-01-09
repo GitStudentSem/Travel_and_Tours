@@ -1,7 +1,7 @@
 @media (max-width: 1280px)
   .header
     &__container
-      max-width: 1000px
+      max-width: 950px
       margin: 0 auto
       margin-top: 20px
       margin-bottom: 20px
@@ -14,23 +14,33 @@
       max-width: 160px
 
   .main
-    max-width: 1000px
-
+    max-width: 950px
+    margin-bottom: 150px
   .popup
     &__title
       font-size: 60px
       margin: 0 0 0 0
     &__content
       font-size: 20px
+
+  .history
+    max-width: 950px
+    &__description
+      max-width: 400px
+    &__image
+      width: 549px
+      height: 445px
+    &__title
+      font-size: 30px
 @media (max-width: 1000px)
   .header
     &__container
-      max-width: 768px
+      max-width: 740px
       margin: 0 auto
       margin-top: 25px
 
   .main
-    max-width: 768px
+    max-width: 740px
 
   .finder
     max-width: 100%
@@ -53,6 +63,16 @@
       margin: 0 0 0 0
     &__content
       font-size: 20px
+
+  .history
+    max-width: 740px
+    &__description
+      max-width: 300px
+    &__image
+      width: 455px
+      height: 368px
+    &__text
+      margin-bottom: 20px
 @media (max-width: 768px)
   .header
     &__navbar
@@ -87,7 +107,7 @@
         right: 0
         left: 0
     &__container
-      max-width: 480px
+      max-width: 450px
       width: 92%
       margin: 0 auto
       margin-top: 25px
@@ -116,8 +136,9 @@
     margin-bottom: 10px
 
   .main
-    max-width: 480px
+    max-width: 450px
     padding-top: 77px
+    margin-bottom: 100px
 
   .finder
     &__title
@@ -134,17 +155,31 @@
   .popup
     &__title
       line-height: 60px
+
+  .history
+    max-width: 450px
+    &__description
+      max-width: 100%
+    &__image
+      display: none
+    &__text
+      margin-bottom: 20px
+
+  .modal
+    &__dialog
+      padding-top: 50px
+
 @media (max-width: 480px)
   .header
     &__container
-      max-width: 320px
+      max-width: 300px
       margin: 0 auto
       margin-top: 25px
 
   .main
-    max-width: 320px
+    max-width: 300px
     padding-top: 77px
-
+    margin-bottom: 50px
   .finder
     &__title
       font-size: 33px
@@ -162,7 +197,15 @@
       margin-bottom: 0
     &__close
       &-img
-        // height: 60px
-        // width: 60px
+        height: 30px
+        width: 30px
 
-// @media (max-width: 320px)
+  .history
+    max-width: 300px
+    &__description
+      max-width: 100%
+    &__image
+      display: none
+
+    &__text
+      margin-bottom: 20px
