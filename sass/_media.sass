@@ -11,26 +11,11 @@
       width: 500px
       height: 500px
     &__menu
-      max-width: 160px
+      margin-top: 20px
 
   .main
     max-width: 90%
     margin-bottom: 150px
-
-  .popup
-    &__title
-      font-size: 60px
-      margin: 0 0 0 0
-    &__content
-      font-size: 20px
-
-  .modal
-    &__title
-      font-size: 60px
-      margin: 0 0 0 0
-    &__text
-      font-size: 20px
-      margin-bottom: 0
 
   .history
     max-width: 90%
@@ -63,13 +48,6 @@
       height: 445px
     &__title
       font-size: 30px
-
-  .reviews
-    max-width: 90%
-    margin-bottom: 150px
-
-  .review
-    max-width: 500px
 
   .stories
     max-width: 90%
@@ -107,29 +85,14 @@
       font-size: 50px
       margin: 0 0 20px 0
     &__menu
-      max-width: 120px
-      margin-right: 40px
+      max-width: 140px
+      margin-right: 20px
       padding-left: 10px
     &__button
       max-width: 120px
       padding: 0px 30px
     &__image
       display: none
-
-  .popup
-    &__title
-      font-size: 50px
-      margin: 0 0 0 0
-    &__content
-      font-size: 20px
-
-  .modal
-    &__title
-      font-size: 50px
-      margin: 0 0 0 0
-      line-height: 60px
-    &__content
-      font-size: 20px
 
   .history
     max-width: 90%
@@ -169,15 +132,6 @@
     &__text
       margin-bottom: 20px
 
-  .reviews
-    max-width: 90%
-    margin-bottom: 100px
-    &__wrapper
-      align-items: start
-
-  .review
-    max-width: 300px
-
   .stories
     max-width: 90%
     margin-bottom: 100px
@@ -207,6 +161,10 @@
     &__title
       margin-bottom: 40px
 
+  .modal
+    &__window
+      &-text
+        font-size: 40px
 @media (max-width: 768px)
   .header
     &__navbar
@@ -283,14 +241,12 @@
     &__menu
       margin: 0
       max-width: 100%
+      width: 49%
+      justify-content: space-around
       margin: 0 0 20px 0
     &__button
       margin: 0
       display: block
-
-  .popup
-    &__title
-      line-height: 60px
 
   .history
     max-width: 90%
@@ -301,12 +257,6 @@
       display: none
     &__text
       margin-bottom: 20px
-
-  .modal
-    &__dialog
-      padding-top: 50px
-    &__title
-      line-height: 60px
 
   .course
     max-width: 90%
@@ -331,16 +281,6 @@
       display: none
     &__text
       margin-bottom: 20px
-
-  .reviews
-    max-width: 90%
-    margin-bottom: 75px
-    &__photo
-      display: none
-
-  .review
-    &__text
-      width: 90%
 
   .stories
     max-width: 90%
@@ -382,6 +322,11 @@
     &__menu
       margin-bottom: 30px
 
+  .modal
+    &__window
+      &-text
+        font-size: 29px
+
 @media (max-width: 480px)
   .header
     &__container
@@ -399,35 +344,6 @@
       font-size: 33px
     &__menu
       max-width: 49%
-
-  .popup
-    &__title
-      line-height: 30px
-      font-size: 25px
-    &__content
-      padding: 20px
-      font-size: 18px
-    &__text
-      margin-bottom: 0
-    &__close
-      &-img
-        height: 30px
-        width: 30px
-
-  .modal
-    &__title
-      line-height: 30px
-      font-size: 22px
-    &__content
-      padding: 20px
-      padding-top: 40px
-      font-size: 18px
-    &__text
-      margin-bottom: 0
-      font-size: 18px
-    &__close
-      height: 30px
-      width: 30px
 
   .history
     max-width: 90%
@@ -469,18 +385,6 @@
       font-size: 21px
       line-height: 21px
 
-  .reviews
-    max-width: 90%
-    margin-bottom: 50px
-    &__title
-      font-size: 30px
-
-  .review
-    &__text
-      width: 90%
-      font-size: 20px
-      line-height: 30px
-
   .stories
     max-width: 90%
     margin-bottom: 50px
@@ -507,3 +411,11 @@
     &__destinations
       margin: 0px 0px 20px 0
       max-width: 45%
+
+  .modal
+    &__window
+      &-text
+        font-size: 20px
+      &-close
+        width: 30px
+        height: 30px
