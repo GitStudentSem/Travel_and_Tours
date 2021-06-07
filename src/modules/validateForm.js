@@ -2,6 +2,10 @@
 //Валидация
 const validateForm = (email, password) => {
   //почта
+  email.addEventListener("input", () => {
+    email.value = email.value.replace(/[^a-z0-9@\-_.!~'*]/, "");
+  });
+
   email.addEventListener("blur", () => {
     // Защита от пустой строки
     if (email.value !== "") {

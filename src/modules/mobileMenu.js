@@ -1,6 +1,5 @@
 "use strict";
 
-// Мобильное меню
 const mobileMenu = () => {
   const burger = document.querySelector(".header__burger");
   const menu = document.querySelector(".header__menu");
@@ -13,7 +12,6 @@ const mobileMenu = () => {
 
       menu.addEventListener("click", (event) => {
         const target = event.target;
-        console.log("target: ", target);
         // Закрытие меню
         if (target.closest(".header__navbar-link")) {
           menu.classList.remove("header__menu-visible");
