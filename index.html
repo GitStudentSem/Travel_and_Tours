@@ -39,19 +39,11 @@
             </ul>
           </div>
           <!-- /.header__navbar -->
-          <div class="login">
-            <button
-              data-toggle="modal"
-              type="submit"
-              class="login__login button"
-            >
+          <div class="header__login">
+            <button type="submit" class="header__login-login button">
               Login
             </button>
-            <button
-              data-toggle="modal"
-              type="submit"
-              class="login__register button"
-            >
+            <button type="submit" class="header__login-register button">
               Register
             </button>
           </div>
@@ -289,8 +281,7 @@
           <p class="review__text">
             “Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem ea
             unde sunt, nobis earum eligendi ratione vero sapiente illo aliquid
-            enim suscipit ullam, nemo iusto ad tempora recusandae nihil
-            inventore.”
+            enim suscipit ullam.”
           </p>
           <p class="review__name">Corey Richard</p>
           <p class="review__post">Personal chef</p>
@@ -335,7 +326,7 @@
           <p class="review__text">
             “Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
             iste nostrum quibusdam magni fugiat dicta ullam aperiam totam et rem
-            autem quae est in, ad ipsum numquam placeat possimus ea.”
+            autem quae est in.”
           </p>
           <p class="review__name">Julia Foley</p>
           <p class="review__post">Fiscal technician</p>
@@ -571,6 +562,7 @@
       </div>
       <!-- footer__social -->
     </footer>
+
     <div class="modal">
       <div class="modal__window">
         <p class="modal__window-text">
@@ -579,6 +571,15 @@
         <img class="modal__window-close" src="img/closed.svg" alt="Закрыть" />
       </div>
     </div>
+
+    <div class="login">
+      <form class="login__form" name="login">
+        <input class="login__input" type="email" placeholder="Your email" />
+        <input class="login__input" type="text" placeholder="Your password" />
+        <button class="login_button button">Login</button>
+      </form>
+    </div>
+    <!-- /.login -->
     <script src="js/main.js"></script>
   </body>
 </html>

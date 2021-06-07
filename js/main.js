@@ -8,6 +8,24 @@ window.onload = function () {
       window.scrollTo(x, y);
     };
   };
+
+  // Плавный скролл
+  const smoothScroll = () => {
+    const scrollLinks = document.querySelectorAll("a.header__navbar-link");
+
+    for (const scrollLink of scrollLinks) {
+      scrollLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        const id = scrollLink.getAttribute("href");
+        document.querySelector(id).scrollIntoView({
+          behavior: "smooth",
+          block: "end",
+        });
+      });
+    }
+  };
+  smoothScroll();
+
   // Модальное окно
   const modal = () => {
     const body = document.querySelector("body");
@@ -43,8 +61,17 @@ window.onload = function () {
       menu.classList.toggle("header__menu-visible");
 
       if (menu.classList.contains("header__menu-visible")) {
-        console.log(1);
         disableScrolling();
+
+        menu.addEventListener("click", (event) => {
+          const target = event.target;
+          console.log("target: ", target);
+          // Закрытие меню
+          if (target.closest(".header__navbar-link")) {
+            menu.classList.remove("header__menu-visible");
+            window.onscroll = () => {};
+          }
+        });
       } else {
         window.onscroll = () => {};
       }
@@ -59,25 +86,19 @@ window.onload = function () {
     const slides = Array.from(document.querySelectorAll(".review"));
     let i = 0;
 
-    const deleteSlide = () => {
-      if (slides[i].classList.contains("review__active")) {
-        slides[i].classList.remove("review__active");
-      }
-    };
-
     prevSlide.addEventListener("click", () => {
-      deleteSlide();
+      slides[i].classList.remove("review__active");
       i--;
       if (i <= 0) {
-        i = 2;
+        i = slides.length - 1;
       }
       slides[i].classList.add("review__active");
     });
 
     nextSlide.addEventListener("click", () => {
-      deleteSlide();
+      slides[i].classList.remove("review__active");
       i++;
-      if (i > 2) {
+      if (i > slides.length - 1) {
         i = 0;
       }
       slides[i].classList.add("review__active");
