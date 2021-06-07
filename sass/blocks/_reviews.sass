@@ -1,5 +1,74 @@
 .reviews
+  position: relative
   max-width: 1151px
   margin: 0 auto
   padding-left: 3px
   margin-bottom: 200px
+  &__buttons
+    position: absolute
+    bottom: 4px
+    right: 0
+    width: 132px
+    height: 60px
+    display: flex
+    justify-content: space-around
+    border-radius: 16px 0 0 0
+    background-color: #fff
+    &-prev, &-next
+      background-color: transparent
+      border: none
+      padding: 0
+      cursor: pointer
+      outline-color: #FB8F1D
+    &-prev-img
+      width: 40px
+      height: 40px
+      transform: rotate(180deg)
+    &-next-img
+      width: 40px
+      height: 40px
+.review
+  position: absolute
+  right: 0
+  bottom: 0
+  left: 0
+  display: flex
+  justify-content: space-between
+  opacity: 0
+  transition: .2s
+  &__active
+    opacity: 1
+    position: static
+  &__rating
+    &-star
+      width: 24px
+      height: 24px
+      margin: 0 16px 30px 0
+  &__text
+    font-family: 'Mulish', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 24px
+    line-height: 36px
+    max-width: 450px
+    margin: 0 0 40px 0
+  &__name
+    font-family: 'Inter', sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 22px
+    line-height: 48px
+    margin: 0
+  &__post
+    font-family: 'Inter', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 48px
+    margin: 0
+  &__right
+    &-img
+      width: 384px
+      height: 491px
+      object-fit: cover
+      border-radius: 14px

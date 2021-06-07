@@ -51,4 +51,37 @@ window.onload = function () {
     });
   };
   mobileMenu();
+
+  // Слайдер
+  const slider = () => {
+    const prevSlide = document.querySelector(".reviews__buttons-prev");
+    const nextSlide = document.querySelector(".reviews__buttons-next");
+    const slides = Array.from(document.querySelectorAll(".review"));
+    let i = 0;
+
+    const deleteSlide = () => {
+      if (slides[i].classList.contains("review__active")) {
+        slides[i].classList.remove("review__active");
+      }
+    };
+
+    prevSlide.addEventListener("click", () => {
+      deleteSlide();
+      i--;
+      if (i <= 0) {
+        i = 2;
+      }
+      slides[i].classList.add("review__active");
+    });
+
+    nextSlide.addEventListener("click", () => {
+      deleteSlide();
+      i++;
+      if (i > 2) {
+        i = 0;
+      }
+      slides[i].classList.add("review__active");
+    });
+  };
+  slider();
 };
