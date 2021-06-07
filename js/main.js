@@ -26,6 +26,30 @@ window.onload = function () {
   };
   smoothScroll();
 
+  //Валидация
+  const validateForm = (email, password) => {
+    //почта
+    email.addEventListener("blur", () => {
+      // Защита от пустой строки
+      if (email.value !== "") {
+        const validate = (email) => {
+          // Проверка на правильность вида e-mail
+          const reg =
+            /^([a-z0-9@\-_.!~'*]+\.)*[a-z0-9@\-_.!~'*]+@[a-z0-9@\-_.!~'*]+(\.[a-z0-9@\-_.!~'*]+)*\.[a-z]{2,6}$/;
+          if (reg.test(email.value) === false) {
+            alert("Enter correct e-mai");
+            return false;
+          }
+        };
+        validate(email);
+      }
+    });
+    // Пароль
+    password.addEventListener("input", () => {
+      password.value = password.value.replace(/[^a-z0-9]/, "");
+    });
+  };
+
   // Модальное окно
   const modal = () => {
     const body = document.querySelector("body");
@@ -35,16 +59,12 @@ window.onload = function () {
       let target = event.target;
 
       if (target.closest("[data-toggle='modal']")) {
-        event.preventDefault();
         modal.classList.add("active");
         disableScrolling();
-        // Нажатие на крестик
       } else if (target.matches(".modal__window-close")) {
-        event.preventDefault();
         modal.classList.remove("active");
         window.onscroll = () => {};
       } else if (target.matches(".active")) {
-        event.preventDefault();
         modal.classList.remove("active");
         window.onscroll = () => {};
       }
@@ -52,6 +72,68 @@ window.onload = function () {
   };
   modal();
 
+  //Регистрация
+  const loginWindow = () => {
+    const loginButton = document.querySelector(".header__login-login");
+    const loginWindow = document.querySelector(".login");
+    const email = document.querySelector(".login__email");
+    const password = document.querySelector(".login__password");
+
+    loginButton.addEventListener("click", () => {
+      disableScrolling();
+      loginWindow.classList.add("active");
+      validateForm(email, password);
+    });
+
+    //Слушатель внутри окна
+    loginWindow.addEventListener("click", (event) => {
+      let target = event.target;
+      if (target.closest(".login__window-close")) {
+        loginWindow.classList.remove("active");
+        email.value = "";
+        password.value = "";
+        window.onscroll = () => {};
+      } else if (target.matches(".active")) {
+        loginWindow.classList.remove("active");
+        email.value = "";
+        password.value = "";
+        window.onscroll = () => {};
+      }
+    });
+
+    //Слушатель внутри окна
+  };
+  loginWindow();
+
+  // Вход залогиненого пользователя
+  const registerWindow = () => {
+    const registerButton = document.querySelector(".header__login-register");
+    const registerWindow = document.querySelector(".register");
+    const email = document.querySelector(".register__email");
+    const password = document.querySelector(".register__password");
+
+    registerButton.addEventListener("click", () => {
+      disableScrolling();
+      registerWindow.classList.add("active");
+      validateForm(email, password);
+    });
+
+    registerWindow.addEventListener("click", (event) => {
+      let target = event.target;
+      if (target.closest(".register__window-close")) {
+        registerWindow.classList.remove("active");
+        email.value = "";
+        password.value = "";
+        window.onscroll = () => {};
+      } else if (target.matches(".active")) {
+        registerWindow.classList.remove("active");
+        email.value = "";
+        password.value = "";
+        window.onscroll = () => {};
+      }
+    });
+  };
+  registerWindow();
   // Мобильное меню
   const mobileMenu = () => {
     const burger = document.querySelector(".header__burger");

@@ -574,12 +574,45 @@
 
     <div class="login">
       <form class="login__form" name="login">
-        <input class="login__input" type="email" placeholder="Your email" />
-        <input class="login__input" type="text" placeholder="Your password" />
-        <button class="login_button button">Login</button>
+        <img class="login__window-close" src="img/closed.svg" alt="Close" />
+        <input
+          class="login__input login__email"
+          type="email"
+          placeholder="Your email"
+        />
+        <input
+          class="login__input login__password"
+          type="text"
+          placeholder="Your password"
+        />
+        <button class="login__button button">Login</button>
       </form>
     </div>
     <!-- /.login -->
+
+    <div class="register">
+      <form class="register__form" name="register">
+        <img class="register__window-close" src="img/closed.svg" alt="Close" />
+        <input
+          class="register__input"
+          id="register__name"
+          type="text"
+          placeholder="Your name"
+        />
+        <input
+          class="register__input register__email"
+          type="email"
+          placeholder="Your email"
+        />
+        <input
+          class="register__input register__password"
+          type="text"
+          placeholder="Your password"
+        />
+        <button class="register__button button">register</button>
+      </form>
+    </div>
+    <!-- /.register -->
     <script src="js/main.js"></script>
   </body>
 </html>
