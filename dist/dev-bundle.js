@@ -104,7 +104,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n // Слайдер\n\nvar slider = function slider() {\n  var prevSlide = document.querySelector(\".reviews__buttons-prev\");\n  var nextSlide = document.querySelector(\".reviews__buttons-next\");\n  var slides = Array.from(document.querySelectorAll(\".review\"));\n  var i = 0;\n  prevSlide.addEventListener(\"click\", function () {\n    slides[i].classList.remove(\"review__active\");\n    i--;\n\n    if (i <= 0) {\n      i = slides.length - 1;\n    }\n\n    slides[i].classList.add(\"review__active\");\n  });\n  nextSlide.addEventListener(\"click\", function () {\n    slides[i].classList.remove(\"review__active\");\n    i++;\n\n    if (i > slides.length - 1) {\n      i = 0;\n    }\n\n    slides[i].classList.add(\"review__active\");\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n//# sourceURL=webpack://Thesis/./src/modules/slider.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n // Слайдер\n\nvar slider = function slider() {\n  var prevSlide = document.querySelector(\".reviews__buttons-prev\");\n  var nextSlide = document.querySelector(\".reviews__buttons-next\");\n  var slides = Array.from(document.querySelectorAll(\".review\"));\n  var i = 0;\n  prevSlide.addEventListener(\"click\", function () {\n    slides[i].classList.remove(\"slide__active\");\n    i--;\n\n    if (i <= 0) {\n      i = slides.length - 1;\n    }\n\n    slides[i].classList.add(\"slide__active\");\n  });\n  nextSlide.addEventListener(\"click\", function () {\n    slides[i].classList.remove(\"slide__active\");\n    i++;\n\n    if (i > slides.length - 1) {\n      i = 0;\n    }\n\n    slides[i].classList.add(\"slide__active\");\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n//# sourceURL=webpack://Thesis/./src/modules/slider.js?");
 
 /***/ }),
 
@@ -528,7 +528,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("b0282935a6e5ad0735fd")
+/******/ 		__webpack_require__.h = () => ("3f0d858618515f500eeb")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

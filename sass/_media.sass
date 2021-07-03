@@ -6,15 +6,15 @@
       padding: 20px 0 20px 0
 
   .finder
-    &__image
-      width: 500px
-      height: 500px
     &__menu
       margin-top: 20px
 
   .main
     max-width: 90%
     padding-bottom: 150px
+    &__image
+      width: 500px
+      height: 500px
 
   .history
     max-width: 90%
@@ -79,6 +79,8 @@
 @media (max-width: 1000px)
   .main
     padding-bottom: 100px
+    &__image
+      display: none
 
   .finder
     max-width: 100%
@@ -92,8 +94,6 @@
     &__button
       max-width: 120px
       padding: 0px 30px
-    &__image
-      display: none
 
   .history
     padding-bottom: 100px
@@ -202,12 +202,6 @@
         align-items: center
         overflow: scroll
         width: 100%
-    &__mobile
-      &-fixed
-        position: fixed
-        top: 0
-        right: 0
-        left: 0
     &__burger
       display: flex
       width: 40px
@@ -226,7 +220,11 @@
       &-login
         margin-right: 0
         margin: 20px 0 10px 0
-
+  .mobile
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
   .main
     padding: 75px 0
 
