@@ -1,4 +1,6 @@
 .login
+  font-family: 'Inter', sans-serif
+  font-size: 14px
   z-index: -1
   position: fixed
   opacity: 0
@@ -11,13 +13,17 @@
   cursor: pointer
   background-color: rgba(0, 0, 0, 0.5)
   transition: .5s
+  &__email, &__status
+    &-message
+      margin: 0
+      position: absolute
+      bottom: 10px
   &__form
     display: flex
     flex-direction: column
     justify-content: flex-end
-    padding: 20px
+    padding: 40px 20px 40px 20px
     width: 300px
-    height: 250px
     background-color: #fff
     border-radius: 16px
     position: absolute
@@ -26,10 +32,7 @@
     transform: translateX(50%)
     cursor: default
   &__input
-    font-family: 'Inter', sans-serif
-    font-size: 14px
     padding: 0 10px 0 10px
-    margin-bottom: 30px
     border-radius: 8px
     width: 100%
     border: none
@@ -52,3 +55,30 @@
 .active
   z-index: 999
   opacity: 1
+.email, .password
+  position: relative
+  padding: 0 0 28px 0
+  &__btn
+    background: none
+    border: none
+    padding: 0
+    cursor: pointer
+    width: 30px
+    height: 30px
+    position: absolute
+    right: 10px
+    top: 5px
+    &::after
+      content: ''
+      position: absolute
+      top: 14px
+      right: 0px
+      width: 30px
+      height: 2px
+      background-color: #fff
+      transform: rotate(45deg)
+      transition: .3s all ease
+      opacity: 1
+.view
+  &::after
+    opacity: 0

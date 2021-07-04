@@ -6,11 +6,12 @@ const loginWindow = () => {
   const loginWindow = document.querySelector(".login");
   const email = document.querySelector(".login__email");
   const password = document.querySelector(".login__password");
+  const emailMessage = document.querySelector(".login__email-message");
 
   loginButton.addEventListener("click", () => {
     disableScrolling();
     loginWindow.classList.add("active");
-    validateForm(email, password);
+    validateForm(email, password, emailMessage);
   });
 
   //Слушатель внутри окна

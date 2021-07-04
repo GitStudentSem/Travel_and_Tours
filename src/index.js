@@ -17,4 +17,7 @@ slider();
 
 import smoothScroll from "./modules/smoothScroll";
 smoothScroll();
+
+import showHidePass from "./modules/showHidePass";
+showHidePass();
 // };
