@@ -1,6 +1,6 @@
 "use strict";
 //Валидация
-const validateForm = (email, password, emailMessage, statusMessage) => {
+const validateForm = (email, password, emailMessage) => {
   //почта
   email.addEventListener("input", () => {
     email.value = email.value.replace(/[^a-z0-9@\-_.!~'*]/, "");

@@ -9,15 +9,12 @@ mobileMenu();
 import modal from "./modules/modal";
 modal();
 
-import registerWindow from "./modules/registerWindow";
-registerWindow();
-
 import slider from "./modules/slider";
 slider();
 
 import smoothScroll from "./modules/smoothScroll";
 smoothScroll();
 
-import showHidePass from "./modules/showHidePass";
-showHidePass();
+// import showHidePass from "./modules/showHidePass";
+// showHidePass();
 // };

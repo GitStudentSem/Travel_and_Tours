@@ -572,61 +572,33 @@
       </div>
     </div>
 
-    <div class="login">
-      <form class="login__form" name="login">
-        <img class="login__window-close" src="img/closed.svg" alt="Close" />
-        <div class="email">
-          <input
-            class="login__input login__email"
-            type="email"
-            placeholder="Your email"
-          />
-          <p class="login__email-message"></p>
-        </div>
-
-        <div class="password">
-          <input
-            class="login__input login__password"
-            type="password"
-            placeholder="Your password"
-          />
-          <button type="button" class="password__btn">
-            <img
-              src="img/view.svg"
-              alt="show / hide password"
-              class="password__img"
-            />
-          </button>
-        </div>
-
-        <button class="login__button button">Login</button>
-        <p class="login__status-message">Error submit form</p>
-      </form>
-    </div>
+    <form class="form-data login">
+      <p class="form-data__title">Login</p>
+      <input type="text" class="email" placeholder="Your email" />
+      <input type="text" class="password" placeholder="Your password" />
+      <button class="show-hide">
+        <img
+          class="show-hide__img"
+          src="./img/view.svg"
+          alt="Show / hide password"
+        />
+      </button>
+    </form>
     <!-- /.login -->
 
-    <div class="register">
-      <form class="register__form" name="register">
-        <img class="register__window-close" src="img/closed.svg" alt="Close" />
-        <input
-          class="register__input"
-          id="register__name"
-          type="text"
-          placeholder="Your name"
+    <form class="form-data register">
+      <p class="form-data__title">Register</p>
+      <input type="text" class="name" placeholder="Your name" />
+      <input type="text" class="email" placeholder="Your email" />
+      <input type="text" class="password" placeholder="Your password" />
+      <button class="show-hide">
+        <img
+          class="show-hide__img"
+          src="./img/view.svg"
+          alt="Show / hide password"
         />
-        <input
-          class="register__input register__email"
-          type="email"
-          placeholder="Your email"
-        />
-        <input
-          class="register__input register__password"
-          type="text"
-          placeholder="Your password"
-        />
-        <button class="register__button button">register</button>
-      </form>
-    </div>
+      </button>
+    </form>
     <!-- /.register -->
     <script src="dist/dev-bundle.js"></script>
   </body>

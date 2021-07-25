@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_loginWindow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/loginWindow */ \"./src/modules/loginWindow.js\");\n/* harmony import */ var _modules_mobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/mobileMenu */ \"./src/modules/mobileMenu.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modal */ \"./src/modules/modal.js\");\n/* harmony import */ var _modules_registerWindow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/registerWindow */ \"./src/modules/registerWindow.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_smoothScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/smoothScroll */ \"./src/modules/smoothScroll.js\");\n/* harmony import */ var _modules_showHidePass__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/showHidePass */ \"./src/modules/showHidePass.js\");\n// window.onload = function () {\n\n\n\n(0,_modules_loginWindow__WEBPACK_IMPORTED_MODULE_0__.default)();\n\n(0,_modules_mobileMenu__WEBPACK_IMPORTED_MODULE_1__.default)();\n\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n(0,_modules_registerWindow__WEBPACK_IMPORTED_MODULE_3__.default)();\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_4__.default)();\n\n(0,_modules_smoothScroll__WEBPACK_IMPORTED_MODULE_5__.default)();\n\n(0,_modules_showHidePass__WEBPACK_IMPORTED_MODULE_6__.default)(); // };\n\n//# sourceURL=webpack://Thesis/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_loginWindow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/loginWindow */ \"./src/modules/loginWindow.js\");\n/* harmony import */ var _modules_mobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/mobileMenu */ \"./src/modules/mobileMenu.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modal */ \"./src/modules/modal.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_smoothScroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/smoothScroll */ \"./src/modules/smoothScroll.js\");\n// window.onload = function () {\n\n\n\n(0,_modules_loginWindow__WEBPACK_IMPORTED_MODULE_0__.default)();\n\n(0,_modules_mobileMenu__WEBPACK_IMPORTED_MODULE_1__.default)();\n\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_3__.default)();\n\n(0,_modules_smoothScroll__WEBPACK_IMPORTED_MODULE_4__.default)(); // import showHidePass from \"./modules/showHidePass\";\n// showHidePass();\n// };\n\n//# sourceURL=webpack://Thesis/./src/index.js?");
 
 /***/ }),
 
@@ -60,7 +60,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _disableScrolling__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./disableScrolling */ \"./src/modules/disableScrolling.js\");\n/* harmony import */ var _validateForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./validateForm */ \"./src/modules/validateForm.js\");\n //Регистрация\n\nvar loginWindow = function loginWindow() {\n  var loginButton = document.querySelector(\".header__login-login\");\n  var loginWindow = document.querySelector(\".login\");\n  var email = document.querySelector(\".login__email\");\n  var password = document.querySelector(\".login__password\");\n  var emailMessage = document.querySelector(\".login__email-message\");\n  loginButton.addEventListener(\"click\", function () {\n    (0,_disableScrolling__WEBPACK_IMPORTED_MODULE_0__.default)();\n    loginWindow.classList.add(\"active\");\n    (0,_validateForm__WEBPACK_IMPORTED_MODULE_1__.default)(email, password, emailMessage);\n  }); //Слушатель внутри окна\n\n  loginWindow.addEventListener(\"click\", function (event) {\n    var target = event.target;\n\n    if (target.closest(\".login__window-close\")) {\n      loginWindow.classList.remove(\"active\");\n      email.value = \"\";\n      password.value = \"\";\n\n      window.onscroll = function () {};\n    } else if (target.matches(\".active\")) {\n      loginWindow.classList.remove(\"active\");\n      email.value = \"\";\n      password.value = \"\";\n\n      window.onscroll = function () {};\n    }\n  });\n};\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loginWindow);\n\n//# sourceURL=webpack://Thesis/./src/modules/loginWindow.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar loginWindow = function loginWindow() {\n  \"use strict\";\n\n  var loginButton = document.querySelector(\".header__login-login\");\n  loginButton.addEventListener(\"click\", function () {\n    console.log(\"2\");\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loginWindow);\n\n//# sourceURL=webpack://Thesis/./src/modules/loginWindow.js?");
 
 /***/ }),
 
@@ -86,28 +86,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/modules/registerWindow.js":
-/*!***************************************!*\
-  !*** ./src/modules/registerWindow.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _disableScrolling__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./disableScrolling */ \"./src/modules/disableScrolling.js\");\n/* harmony import */ var _validateForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./validateForm */ \"./src/modules/validateForm.js\");\n // Вход залогиненого пользователя\n\nvar registerWindow = function registerWindow() {\n  var registerButton = document.querySelector(\".header__login-register\");\n  var registerWindow = document.querySelector(\".register\");\n  var email = document.querySelector(\".register__email\");\n  var password = document.querySelector(\".register__password\");\n  registerButton.addEventListener(\"click\", function () {\n    (0,_disableScrolling__WEBPACK_IMPORTED_MODULE_0__.default)();\n    registerWindow.classList.add(\"active\");\n    (0,_validateForm__WEBPACK_IMPORTED_MODULE_1__.default)(email, password);\n  });\n  registerWindow.addEventListener(\"click\", function (event) {\n    var target = event.target;\n\n    if (target.closest(\".register__window-close\")) {\n      registerWindow.classList.remove(\"active\");\n      email.value = \"\";\n      password.value = \"\";\n\n      window.onscroll = function () {};\n    } else if (target.matches(\".active\")) {\n      registerWindow.classList.remove(\"active\");\n      email.value = \"\";\n      password.value = \"\";\n\n      window.onscroll = function () {};\n    }\n  });\n};\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (registerWindow);\n\n//# sourceURL=webpack://Thesis/./src/modules/registerWindow.js?");
-
-/***/ }),
-
-/***/ "./src/modules/showHidePass.js":
-/*!*************************************!*\
-  !*** ./src/modules/showHidePass.js ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n\nvar showHidePass = function showHidePass() {\n  var showHide = document.querySelector(\".password__btn\");\n  var input = document.querySelector(\".login__password\");\n  showHide.addEventListener(\"click\", function (event) {\n    event.preventDefault();\n    showHide.classList.toggle(\"view\");\n\n    if (input.getAttribute(\"type\") === \"password\") {\n      input.setAttribute(\"type\", \"text\");\n    } else {\n      input.setAttribute(\"type\", \"password\");\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showHidePass);\n\n//# sourceURL=webpack://Thesis/./src/modules/showHidePass.js?");
-
-/***/ }),
-
 /***/ "./src/modules/slider.js":
 /*!*******************************!*\
   !*** ./src/modules/slider.js ***!
@@ -127,17 +105,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n // Плавный скролл\n\nfunction _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== \"undefined\" && o[Symbol.iterator] || o[\"@@iterator\"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === \"number\") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError(\"Invalid attempt to iterate non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it[\"return\"] != null) it[\"return\"](); } finally { if (didErr) throw err; } } }; }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nvar smoothScroll = function smoothScroll() {\n  var scrollLinks = document.querySelectorAll(\"a.header__navbar-link\");\n\n  var _iterator = _createForOfIteratorHelper(scrollLinks),\n      _step;\n\n  try {\n    var _loop = function _loop() {\n      var scrollLink = _step.value;\n      scrollLink.addEventListener(\"click\", function (event) {\n        event.preventDefault();\n        var id = scrollLink.getAttribute(\"href\");\n        document.querySelector(id).scrollIntoView({\n          behavior: \"smooth\",\n          block: \"end\"\n        });\n      });\n    };\n\n    for (_iterator.s(); !(_step = _iterator.n()).done;) {\n      _loop();\n    }\n  } catch (err) {\n    _iterator.e(err);\n  } finally {\n    _iterator.f();\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (smoothScroll);\n\n//# sourceURL=webpack://Thesis/./src/modules/smoothScroll.js?");
-
-/***/ }),
-
-/***/ "./src/modules/validateForm.js":
-/*!*************************************!*\
-  !*** ./src/modules/validateForm.js ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n //Валидация\n\nvar validateForm = function validateForm(email, password, emailMessage, statusMessage) {\n  //почта\n  email.addEventListener(\"input\", function () {\n    email.value = email.value.replace(/[^a-z0-9@\\-_.!~'*]/, \"\");\n  });\n  email.addEventListener(\"blur\", function () {\n    // Защита от пустой строки\n    if (email.value !== \"\") {\n      var validate = function validate(email) {\n        // Проверка на правильность вида e-mail\n        var reg = /^([a-z0-9@\\-_.!~'*]+\\.)*[a-z0-9@\\-_.!~'*]+@[a-z0-9@\\-_.!~'*]+(\\.[a-z0-9@\\-_.!~'*]+)*\\.[a-z]{2,6}$/;\n\n        if (reg.test(email.value) === false) {\n          emailMessage.textContent = \"Incorrect email\";\n          emailMessage.classList.remove(\"succses\");\n          emailMessage.classList.add(\"error\");\n          return false;\n        } else {\n          emailMessage.textContent = \"Correct email\";\n          emailMessage.classList.remove(\"error\");\n          emailMessage.classList.add(\"succses\");\n        }\n      };\n\n      validate(email);\n    }\n  }); // Пароль\n\n  password.addEventListener(\"input\", function () {\n    password.value = password.value.replace(/[^a-z0-9]/gi, \"\");\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (validateForm);\n\n//# sourceURL=webpack://Thesis/./src/modules/validateForm.js?");
 
 /***/ }),
 
@@ -539,7 +506,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("0473ea7bff111e165581")
+/******/ 		__webpack_require__.h = () => ("3e3f04f3e5dfd8f8c68b")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
