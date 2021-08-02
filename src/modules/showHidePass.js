@@ -1,16 +1,13 @@
 "use strict";
-const showHidePass = () => {
-  const showHide = document.querySelector(".password__btn");
-  const input = document.querySelector(".login__password");
-
-  showHide.addEventListener("click", (event) => {
+const showHidePass = (showHideButton, password) => {
+  showHideButton.addEventListener("click", (event) => {
     event.preventDefault();
-    showHide.classList.toggle("view");
+    showHideButton.classList.toggle("view");
 
-    if (input.getAttribute("type") === "password") {
-      input.setAttribute("type", "text");
+    if (password.getAttribute("type") === "password") {
+      password.setAttribute("type", "text");
     } else {
-      input.setAttribute("type", "password");
+      password.setAttribute("type", "password");
     }
   });
 };

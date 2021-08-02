@@ -1,6 +1,6 @@
 "use strict";
 //Валидация
-const validateForm = (email, password, emailMessage) => {
+const validateForm = (email, password) => {
   //почта
   email.addEventListener("input", () => {
     email.value = email.value.replace(/[^a-z0-9@\-_.!~'*]/, "");
@@ -14,14 +14,10 @@ const validateForm = (email, password, emailMessage) => {
         const reg =
           /^([a-z0-9@\-_.!~'*]+\.)*[a-z0-9@\-_.!~'*]+@[a-z0-9@\-_.!~'*]+(\.[a-z0-9@\-_.!~'*]+)*\.[a-z]{2,6}$/;
         if (reg.test(email.value) === false) {
-          emailMessage.textContent = "Incorrect email";
-          emailMessage.classList.remove("succses");
-          emailMessage.classList.add("error");
+          email.classList.add("incorrect");
           return false;
         } else {
-          emailMessage.textContent = "Correct email";
-          emailMessage.classList.remove("error");
-          emailMessage.classList.add("succses");
+          email.classList.remove("incorrect");
         }
       };
       validate(email);

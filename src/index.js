@@ -3,6 +3,9 @@
 import loginWindow from "./modules/loginWindow";
 loginWindow();
 
+import registerWindow from "./modules/registerWindow";
+registerWindow();
+
 import mobileMenu from "./modules/mobileMenu";
 mobileMenu();
 

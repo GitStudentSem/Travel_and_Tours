@@ -1,15 +1,16 @@
-const loginWindow = () => {
+const registerWindow = () => {
   "use strict";
-  const loginButton = document.querySelector(".header__login-login");
-  const login = document.querySelector(".login");
+  const registerButton = document.querySelector(".header__login-register");
+  const register = document.querySelector(".register");
   const overlay = document.querySelector(".overlay");
-  const email = document.querySelector(".login__email");
-  const password = document.querySelector(".login__password");
-  const submitForm = document.querySelector(".login__submit-form");
-  const showHide = document.querySelector(".login__show-hide");
+  const email = document.querySelector(".register__email");
+  const password = document.querySelector(".register__password");
+  const submitForm = document.querySelector(".register__submit-form");
+  const showHide = document.querySelector(".register__show-hide");
+
   //Открытие окна логин
-  loginButton.addEventListener("click", () => {
-    login.classList.add("active");
+  registerButton.addEventListener("click", () => {
+    register.classList.add("active");
     overlay.style.display = "block";
     validateForm(email, password);
     showHidePass(showHide, password);
@@ -18,19 +19,20 @@ const loginWindow = () => {
 
   // Закрытие модального окна
   overlay.addEventListener("click", () => {
-    login.classList.remove("active");
+    register.classList.remove("active");
     overlay.style.display = "none";
     window.onscroll = () => {};
   });
 
-  //Войти
+  // Зарегестрироваться
   submitForm.addEventListener("click", () => {
-    login.classList.remove("active");
+    register.classList.remove("active");
     overlay.style.display = "none";
     window.onscroll = () => {};
   });
 };
+
 import showHidePass from "./showHidePass";
 import disableScrolling from "./disableScrolling";
 import validateForm from "./validateForm";
-export default loginWindow;
+export default registerWindow;

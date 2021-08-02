@@ -40,10 +40,10 @@
           </div>
           <!-- /.header__navbar -->
           <div class="header__login">
-            <button type="submit" class="header__login-login button">
+            <button type="button" class="header__login-login button">
               Login
             </button>
-            <button type="submit" class="header__login-register button">
+            <button type="button" class="header__login-register button">
               Register
             </button>
           </div>
@@ -566,7 +566,7 @@
     <div class="modal">
       <div class="modal__window">
         <p class="modal__window-text">
-          Это учебный проект, поэтому некоторые функции не работают.
+          This is a tutorial project, so some functions do not work.
         </p>
         <img class="modal__window-close" src="img/closed.svg" alt="Закрыть" />
       </div>
@@ -574,14 +574,21 @@
 
     <form class="form-data login">
       <p class="form-data__title">Login</p>
-      <input type="text" class="email" placeholder="Your email" />
-      <input type="text" class="password" placeholder="Your password" />
-      <button class="show-hide">
+      <input type="text" class="login__email email" placeholder="Your email" />
+      <input
+        type="password"
+        class="login__password password"
+        placeholder="Your password"
+      />
+      <button class="login__show-hide show-hide" type="button">
         <img
           class="show-hide__img"
           src="./img/view.svg"
           alt="Show / hide password"
         />
+      </button>
+      <button class="login__submit-form submit-form" type="button">
+        Sign in
       </button>
     </form>
     <!-- /.login -->
@@ -589,16 +596,28 @@
     <form class="form-data register">
       <p class="form-data__title">Register</p>
       <input type="text" class="name" placeholder="Your name" />
-      <input type="text" class="email" placeholder="Your email" />
-      <input type="text" class="password" placeholder="Your password" />
-      <button class="show-hide">
+      <input
+        type="text"
+        class="register__email email"
+        placeholder="Your email"
+      />
+      <input
+        type="password"
+        class="register__password password"
+        placeholder="Your password"
+      />
+      <button class="register__show-hide show-hide" type="button">
         <img
           class="show-hide__img"
           src="./img/view.svg"
           alt="Show / hide password"
         />
       </button>
+      <button class="register__submit-form submit-form" type="button">
+        Sign up
+      </button>
     </form>
+    <div class="overlay"></div>
     <!-- /.register -->
     <script src="dist/dev-bundle.js"></script>
   </body>
